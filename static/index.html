@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sheet Cleaner</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header-row">
+      <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="theme-slider">
+            <input type="checkbox" id="theme-slider" />
+            <div class="slider round"></div>
+        </label>
+        <span class="theme-label">Dark Mode</span>
+      </div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">EXCEL CLEANING TOOL</p>
+      <h1>Simple and Effective</h1>
+      <p>Upload a workbook, choose a sheet and its columns, then apply the cleanup operations you need.</p>
+    </section>
+
+    <section class="card">
+      <label id="drop-zone" class="upload-label" for="file-input">
+        <span>Choose an Excel file</span>
+        <small>.xlsx or .xls (or drag and drop here)</small>
+      </label>
+      <input id="file-input" type="file" accept=".xlsx,.xls" />
+      <p id="file-name" class="muted">No file selected</p>
+    </section>
+
+    <section id="selection-area" hidden>
+      <section class="card">
+        <label for="sheet-select">Worksheet</label>
+        <select id="sheet-select"></select>
+      </section>
+
+      <section class="card">
+        <div class="section-heading">
+          <div>
+            <h2>Select columns</h2>
+            <p>Choose the columns to clean.</p>
+          </div>
+          <button id="select-all-columns" class="text-button" type="button">Select all</button>
+        </div>
+        <div id="columns-list" class="checkbox-grid"></div>
+      </section>
+
+      <section id="operations-area" class="card" hidden>
+        <div class="section-heading">
+          <div>
+            <h2>Cleaning operations</h2>
+            <p>These operations apply to every selected column.</p>
+          </div>
+        </div>
+        <div id="operations-list" class="checkbox-grid"></div>
+      </section>
+
+      <section id="preview-area" class="card" hidden>
+        <h2>Preview</h2>
+        <div class="table-wrap"><table id="preview-table"></table></div>
+      </section>
+
+      <div class="button-group">
+        <button id="clean-button" class="primary-button" type="button" disabled>
+          <span class="btn-text">Clean &amp; download</span>
+          <span class="spinner" hidden></span>
+        </button>
+        <button id="reset-button" class="text-button" type="button" hidden>Start over</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast-container" class="toast-container"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+# Environments
+venv/
+env/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local Data/Uploads (We don't want to upload colleagues' private data!)
+uploads/
+outputs/
+*.xlsx
+*.xls
+*.csv
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Redundant nested project backup
+project/
