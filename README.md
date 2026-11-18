@@ -28,7 +28,6 @@ A modern, fast, and user-friendly spreadsheet cleaning tool built with **FastAPI
 ├── app.py               # FastAPI backend with upload and processing endpoints
 ├── sheet_cleaner.py     # Pandas cleaning controller and operations
 ├── requirements.txt     # Python dependencies
-├── start.bat            # One-click Windows starter script
 ├── static/
 │   ├── index.html       # Web application UI
 │   ├── styles.css       # Clean styling with dark mode support
@@ -36,18 +35,7 @@ A modern, fast, and user-friendly spreadsheet cleaning tool built with **FastAPI
 └── .gitignore           # Ignores venv, temp uploads/outputs, and data files
 ```
 
-## Quick Start (Windows)
-
-Simply double-click `start.bat`.
-
-The script will automatically:
-1. Verify Python installation.
-2. Create and activate a local virtual environment (`venv`).
-3. Install required packages from `requirements.txt`.
-4. Launch the FastAPI Uvicorn server on `http://127.0.0.1:8000`.
-5. Open the app in your default browser.
-
-## Manual Installation
+## Getting Started
 
 1. **Clone the repository**:
    ```bash
